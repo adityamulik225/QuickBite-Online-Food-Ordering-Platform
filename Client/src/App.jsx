@@ -1,18 +1,20 @@
 
 import './App.css'
-import Home from './components/Home'
-import Navbar from './components/Navbar';
 
-function App() {
+import NavBar from './components/NavBar';
+import Home from './components/Home';
+import Footer from './components/Footer';
+
+function App (){
   return (
- <>
-
- <h3>State in React</h3>
- <Home/>
-    &nbsp;
-    <Navbar></Navbar>
-     </>
-  )
+    <>
+    
+    <NavBar/>
+    <Home/>
+    <Footer/>
+    </>
+  );
 }
+
 
 export default App;
