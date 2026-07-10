@@ -1,7 +1,7 @@
 import './Navbar.css'
 import Logo from "../assets/logo.png";
 import { Search, ShoppingCart, User } from "lucide-react";
-import Home from './Home.jsx';
+
 
 
 function NavBar() {
