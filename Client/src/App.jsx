@@ -1,6 +1,6 @@
 import './App.css'
 
-import NavBar from './components/Navbar.jsx';
+import NavBar from './components/NavBar.jsx';
 import Home from './components/Home.jsx';
 import Footer from './components/Footer.jsx';
 
