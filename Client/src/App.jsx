@@ -1,13 +1,13 @@
 import './App.css'
 
-import NavBar from './components/NavBar.jsx';
+import Navbar from './components/Navbar.jsx';
 import Home from './components/Home.jsx';
 import Footer from './components/Footer.jsx';
 
 function App (){
   return (
     <>
-      <NavBar/>
+      <Navbar/>
       <Home/>
       <Footer/>
     </>
