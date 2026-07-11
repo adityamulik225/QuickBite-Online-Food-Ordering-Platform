@@ -1,5 +1,5 @@
 import './Navbar.css'
-import Logo from "../assets/logo.png";
+import logo from "../assets/logo.png";
 import { Search, ShoppingCart, User } from "lucide-react";
 
 
@@ -8,7 +8,7 @@ function NavBar() {
   return (
     <nav className="  Navbar">
       <div className="logo">
-        <img src={Logo} alt="QuickBite Logo" />
+        <img src={logo} alt="QuickBite logo" />
       </div>
 
       <ul className=" listofitems">
