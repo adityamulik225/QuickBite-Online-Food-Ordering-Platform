@@ -1,0 +1,407 @@
+
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   LIGHT MODE DEFAULT
+========================================== */
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f8f8f8;
+  color: #333333;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+#root {
+  min-height: 100vh;
+  background: #f8f8f8;
+  color: #333333;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.Navbar {
+  width: 100%;
+  height: 90px;
+  background: #ffffff;
+  color: #333333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 190px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* ==========================================
+   MENU
+========================================== */
+
+.listofitems {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 45px;
+}
+
+.listofitems li {
+  position: relative;
+}
+
+.listofitems li a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.listofitems li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0%;
+  height: 3px;
+  background: #ff6b35;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.listofitems li:hover::after {
+  width: 100%;
+}
+
+.listofitems li a:hover {
+  color: #ff6b35;
+}
+
+/* ==========================================
+   RIGHT SECTION
+========================================== */
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Icon Buttons */
+
+.search button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333333;
+  transition: 0.3s;
+}
+
+.search button:hover {
+  color: #ff6b35;
+  transform: translateY(-2px);
+}
+
+/* Cart Badge */
+
+.search span {
+  background: #ff3b30;
+  color: white;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* Login Button */
+
+.searchbutton {
+  background: #ff6b35 !important;
+  color: white !important;
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.searchbutton:hover {
+  background: #e85b28 !important;
+  box-shadow: 0 10px 20px rgba(255, 107, 53, 0.35);
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+body.dark-mode,
+body.dark-mode #root {
+  background: #121212;
+  color: #ffffff;
+}
+
+/* Navbar Dark */
+
+body.dark-mode .Navbar {
+  background: #1e1e1e;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Navbar Links */
+
+body.dark-mode .listofitems li a {
+  color: #ffffff;
+}
+
+body.dark-mode .listofitems li a:hover {
+  color: #ff6b35;
+}
+
+/* Navbar Icons */
+
+body.dark-mode .search button {
+  color: #ffffff;
+}
+
+body.dark-mode .search button:hover {
+  color: #ff6b35;
+}
+
+/* Main Sections */
+
+body.dark-mode main,
+body.dark-mode section {
+  background: #121212;
+  color: #ffffff;
+}
+
+/* Common Cards */
+
+body.dark-mode .card,
+body.dark-mode .food-card {
+  background: #1e1e1e;
+  color: #ffffff;
+}
+
+/* Inputs */
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background: #252525;
+  color: #ffffff;
+  border-color: #555555;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #aaaaaa;
+}
+
+/* ==========================================
+   LARGE DESKTOP
+========================================== */
+
+@media (min-width: 1400px) {
+  .Navbar {
+    padding: 0 10%;
+    height: 95px;
+  }
+
+  .logo img {
+    width: 210px;
+  }
+
+  .listofitems {
+    gap: 55px;
+  }
+
+  .listofitems li a {
+    font-size: 19px;
+  }
+
+  .search {
+    gap: 30px;
+  }
+}
+
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media (max-width: 1200px) {
+  .Navbar {
+    padding: 0 5%;
+  }
+
+  .logo img {
+    width: 170px;
+  }
+
+  .listofitems {
+    gap: 30px;
+  }
+
+  .listofitems li a {
+    font-size: 17px;
+  }
+
+  .search {
+    gap: 18px;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 992px) {
+  .Navbar {
+    padding: 0 4%;
+  }
+
+  .logo img {
+    width: 160px;
+  }
+
+  .listofitems {
+    gap: 22px;
+  }
+
+  .listofitems li a {
+    font-size: 16px;
+  }
+
+  .search {
+    gap: 15px;
+  }
+
+  .search button {
+    font-size: 16px;
+  }
+
+  .searchbutton {
+    padding: 10px 20px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+  .Navbar {
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .logo img {
+    width: 160px;
+  }
+
+  .listofitems {
+    width: 100%;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .listofitems li a {
+    font-size: 17px;
+  }
+
+  .search {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .searchbutton {
+    width: 180px;
+    justify-content: center;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .Navbar {
+    padding: 18px;
+  }
+
+  .logo img {
+    width: 140px;
+  }
+
+  .listofitems li a {
+    font-size: 16px;
+  }
+
+  .search {
+    gap: 15px;
+  }
+
+  .search button {
+    font-size: 15px;
+  }
+
+  .searchbutton {
+    width: 160px;
+    padding: 10px;
+    font-size: 15px;
+  }
+}
